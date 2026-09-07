@@ -1,0 +1,70 @@
+<svg width="680" height="320" viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>管理画面 予約枠管理タブのイメージ</title>
+<defs>
+  <clipPath id="clip3"><rect x="0" y="0" width="680" height="320" rx="10"/></clipPath>
+</defs>
+<rect x="0" y="0" width="680" height="320" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<g clip-path="url(#clip3)">
+  <rect x="0" y="0" width="680" height="320" fill="#f1f5f9"/>
+
+  <rect x="0" y="0" width="680" height="28" fill="#e5e7eb"/>
+  <circle cx="16" cy="14" r="5" fill="#ef4444"/>
+  <circle cx="32" cy="14" r="5" fill="#f59e0b"/>
+  <circle cx="48" cy="14" r="5" fill="#22c55e"/>
+
+  <rect x="0" y="28" width="680" height="40" fill="#06c755"/>
+  <text x="20" y="48" dominant-baseline="central" fill="#ffffff" font-size="13" font-weight="bold" font-family="sans-serif">説明会予約ツール 管理画面</text>
+  <text x="660" y="48" text-anchor="end" dominant-baseline="central" fill="#ffffff" font-size="11" font-family="sans-serif">ログアウト</text>
+
+  <rect x="0" y="68" width="680" height="36" fill="#ffffff"/>
+  <line x1="0" y1="104" x2="680" y2="104" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="20" y="86" dominant-baseline="central" fill="#06c755" font-size="12" font-weight="bold" font-family="sans-serif">予約枠管理</text>
+  <rect x="18" y="98" width="66" height="3" fill="#06c755"/>
+  <text x="110" y="86" dominant-baseline="central" fill="#64748b" font-size="12" font-family="sans-serif">予約一覧</text>
+  <text x="190" y="86" dominant-baseline="central" fill="#64748b" font-size="12" font-family="sans-serif">選択肢マスタ</text>
+  <text x="290" y="86" dominant-baseline="central" fill="#64748b" font-size="12" font-family="sans-serif">LINE設定</text>
+  <text x="370" y="86" dominant-baseline="central" fill="#64748b" font-size="12" font-family="sans-serif">管理者アカウント</text>
+
+  <text x="40" y="132" fill="#111827" font-size="15" font-weight="bold" font-family="sans-serif">予約枠管理</text>
+
+  <rect x="40" y="150" width="600" height="130" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="40" y="150" width="600" height="28" fill="#f8fafc"/>
+  <text x="48" y="164" dominant-baseline="central" fill="#64748b" font-size="10.5" font-weight="bold" font-family="sans-serif">タイトル</text>
+  <text x="210" y="164" dominant-baseline="central" fill="#64748b" font-size="10.5" font-weight="bold" font-family="sans-serif">候補日</text>
+  <text x="290" y="164" dominant-baseline="central" fill="#64748b" font-size="10.5" font-weight="bold" font-family="sans-serif">時間</text>
+  <text x="380" y="164" dominant-baseline="central" fill="#64748b" font-size="10.5" font-weight="bold" font-family="sans-serif">場所</text>
+  <text x="470" y="164" dominant-baseline="central" fill="#64748b" font-size="10.5" font-weight="bold" font-family="sans-serif">定員</text>
+  <text x="520" y="164" dominant-baseline="central" fill="#64748b" font-size="10.5" font-weight="bold" font-family="sans-serif">予約数</text>
+  <text x="580" y="164" dominant-baseline="central" fill="#64748b" font-size="10.5" font-weight="bold" font-family="sans-serif">公開</text>
+
+  <line x1="40" y1="178" x2="640" y2="178" stroke="#f1f5f9"/>
+  <text x="48" y="195" dominant-baseline="central" fill="#111827" font-size="11" font-family="sans-serif">説明会 第1回</text>
+  <text x="210" y="195" dominant-baseline="central" fill="#374151" font-size="11" font-family="sans-serif">10/15</text>
+  <text x="290" y="195" dominant-baseline="central" fill="#374151" font-size="11" font-family="sans-serif">14:00〜15:00</text>
+  <text x="380" y="195" dominant-baseline="central" fill="#374151" font-size="11" font-family="sans-serif">本館2F</text>
+  <text x="470" y="195" dominant-baseline="central" fill="#374151" font-size="11" font-family="sans-serif">10</text>
+  <text x="520" y="195" dominant-baseline="central" fill="#374151" font-size="11" font-family="sans-serif">3</text>
+  <rect x="578" y="187" width="48" height="16" rx="8" fill="#dcfce7"/>
+  <text x="602" y="195" text-anchor="middle" dominant-baseline="central" fill="#15803d" font-size="9.5" font-weight="bold" font-family="sans-serif">公開中</text>
+
+  <line x1="40" y1="212" x2="640" y2="212" stroke="#f1f5f9"/>
+  <text x="48" y="229" dominant-baseline="central" fill="#111827" font-size="11" font-family="sans-serif">説明会 第2回</text>
+  <text x="210" y="229" dominant-baseline="central" fill="#374151" font-size="11" font-family="sans-serif">10/18</text>
+  <text x="290" y="229" dominant-baseline="central" fill="#374151" font-size="11" font-family="sans-serif">11:00〜12:00</text>
+  <text x="380" y="229" dominant-baseline="central" fill="#374151" font-size="11" font-family="sans-serif">本館2F</text>
+  <text x="470" y="229" dominant-baseline="central" fill="#374151" font-size="11" font-family="sans-serif">10</text>
+  <text x="520" y="229" dominant-baseline="central" fill="#374151" font-size="11" font-family="sans-serif">6</text>
+  <rect x="578" y="221" width="48" height="16" rx="8" fill="#dcfce7"/>
+  <text x="602" y="229" text-anchor="middle" dominant-baseline="central" fill="#15803d" font-size="9.5" font-weight="bold" font-family="sans-serif">公開中</text>
+
+  <line x1="40" y1="246" x2="640" y2="246" stroke="#f1f5f9"/>
+  <text x="48" y="263" dominant-baseline="central" fill="#111827" font-size="11" font-family="sans-serif">説明会 第3回</text>
+  <text x="210" y="263" dominant-baseline="central" fill="#374151" font-size="11" font-family="sans-serif">10/22</text>
+  <text x="290" y="263" dominant-baseline="central" fill="#374151" font-size="11" font-family="sans-serif">14:00〜15:00</text>
+  <text x="380" y="263" dominant-baseline="central" fill="#374151" font-size="11" font-family="sans-serif">本館2F</text>
+  <text x="470" y="263" dominant-baseline="central" fill="#374151" font-size="11" font-family="sans-serif">10</text>
+  <text x="520" y="263" dominant-baseline="central" fill="#374151" font-size="11" font-family="sans-serif">10</text>
+  <rect x="578" y="255" width="48" height="16" rx="8" fill="#dcfce7"/>
+  <text x="602" y="263" text-anchor="middle" dominant-baseline="central" fill="#15803d" font-size="9.5" font-weight="bold" font-family="sans-serif">公開中</text>
+</g>
+</svg>
