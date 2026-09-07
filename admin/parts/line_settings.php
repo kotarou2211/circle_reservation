@@ -56,7 +56,8 @@ $callback_url = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'h
     <div class="card-header bg-white fw-bold" style="font-size:13px;">基本設定</div>
     <div class="card-body">
       <label class="form-label small text-muted mb-1">サークル・団体名</label>
-      <input type="text" name="circle_name" class="form-control form-control-sm" value="<?= $v('circle_name') ?>">
+      <input type="text" name="circle_name" class="form-control form-control-sm" value="<?= $v('circle_name') ?>" placeholder="例: ○○大学○○サークル">
+      <div class="form-text">予約ページの冒頭に「（この名前）の説明会予約画面です！」と表示されます。</div>
     </div>
   </div>
 

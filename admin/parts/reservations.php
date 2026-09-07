@@ -11,7 +11,7 @@ $h = fn($s) => htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8');
 $rows = $pdo->query("
     SELECT r.id AS reservation_id, r.reserved_at,
            es.title AS slot_title, es.event_date, es.start_time,
-           g.display_name, g.line_user_id, g.affiliation_name,
+           g.display_name, g.line_user_id,
            gr.name AS grade_name, fa.name AS faculty_name
     FROM reservations r
     JOIN event_slots es ON es.id = r.slot_id
@@ -42,14 +42,13 @@ foreach ($rows as $r) {
     </div>
     <div class="card-body p-0">
       <table class="table table-sm mb-0">
-        <thead><tr><th>氏名</th><th>学年</th><th>学部</th><th>大学・サークル名</th><th>予約日時</th><th></th></tr></thead>
+        <thead><tr><th>氏名</th><th>学年</th><th>学部</th><th>予約日時</th><th></th></tr></thead>
         <tbody>
           <?php foreach ($g['rows'] as $r): ?>
           <tr>
             <td><?= $h($r['display_name']) ?></td>
             <td><?= $h($r['grade_name'] ?? '—') ?></td>
             <td><?= $h($r['faculty_name'] ?? '—') ?></td>
-            <td><?= $h($r['affiliation_name'] ?? '—') ?></td>
             <td class="text-muted" style="font-size:12px;"><?= $h($r['reserved_at']) ?></td>
             <td>
               <button class="btn btn-outline-secondary btn-sm" onclick="sendReminder(<?= (int)$r['reservation_id'] ?>, this)">

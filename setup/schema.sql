@@ -56,7 +56,6 @@ CREATE TABLE IF NOT EXISTS registrants (
     display_name     VARCHAR(100) NOT NULL,
     grade_id         INT NULL,
     faculty_id       INT NULL,
-    affiliation_name VARCHAR(150) NULL COMMENT '大学・サークル名（自由入力）',
     created_at       DATETIME DEFAULT NOW(),
     INDEX idx_reg_grade   (grade_id),
     INDEX idx_reg_faculty (faculty_id)
@@ -106,7 +105,7 @@ INSERT IGNORE INTO grades (name, sort_order) VALUES
     ('M1',    5), ('M2',    6), ('その他', 7);
 
 INSERT IGNORE INTO system_config (config_key, config_value) VALUES
-    ('circle_name',               'サークル名'),
+    ('circle_name',               ''),
     ('liff_id',                   ''),
     ('line_channel_id',           ''),
     ('line_channel_secret',       ''),

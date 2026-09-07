@@ -21,7 +21,7 @@ if (!preg_match('/^U[0-9a-fA-F]{32}$/', $line_id)) {
 }
 
 try {
-    $rstmt = $pdo->prepare("SELECT id, display_name, grade_id, faculty_id, affiliation_name FROM registrants WHERE line_user_id = ? LIMIT 1");
+    $rstmt = $pdo->prepare("SELECT id, display_name, grade_id, faculty_id FROM registrants WHERE line_user_id = ? LIMIT 1");
     $rstmt->execute([$line_id]);
     $registrant = $rstmt->fetch() ?: null;
 

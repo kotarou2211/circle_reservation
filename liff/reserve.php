@@ -1,11 +1,12 @@
 <?php
 /**
  * liff/reserve.php — 説明会予約ページ（LIFF）
- * 初回アクセス時は登録フォーム（名前・学年・学部・大学/サークル名）→ 予約枠一覧の順に表示する。
+ * 初回アクセス時は登録フォーム（名前・学年・学部）→ 予約枠一覧の順に表示する。
  */
 require_once __DIR__ . '/../common/db_connect.php';
-$liff_id     = getConfig($pdo, 'liff_id') ?: '';
-$circle_name = getConfig($pdo, 'circle_name') ?: '説明会予約';
+$liff_id         = getConfig($pdo, 'liff_id') ?: '';
+$circle_name_raw = getConfig($pdo, 'circle_name') ?: '';
+$circle_name     = $circle_name_raw ?: '説明会予約';
 $h = fn($s) => htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8');
 ?>
 <!DOCTYPE html>
@@ -45,6 +46,7 @@ $h = fn($s) => htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8');
 
 <script>
 const LIFF_ID = <?= json_encode($liff_id) ?>;
+const CIRCLE_NAME = <?= json_encode($circle_name_raw) ?>;
 const API_ROOT = '../api/';
 let _lineId = '';
 let _initData = null;
@@ -83,8 +85,12 @@ function render() {
 function renderRegisterForm() {
   const gradeOpts = _initData.grades.map(g => `<option value="${g.id}">${escH(g.name)}</option>`).join('');
   const facOpts = _initData.faculties.map(f => `<option value="${f.id}">${escH(f.name)}</option>`).join('');
+  const greeting = CIRCLE_NAME
+    ? `<div class="slot-title" style="color:#06c755;">${escH(CIRCLE_NAME)}の説明会予約画面です！</div>`
+    : '';
   document.getElementById('app').innerHTML = `
     <div class="card">
+      ${greeting}
       <div class="slot-title">はじめに登録してください</div>
       <div class="slot-meta">予約の前に、簡単な情報の登録をお願いします。</div>
       <label>お名前</label>
@@ -93,8 +99,6 @@ function renderRegisterForm() {
       <select id="reg-grade"><option value="">選択してください</option>${gradeOpts}</select>
       <label>学部</label>
       <select id="reg-faculty"><option value="">選択してください</option>${facOpts}</select>
-      <label>大学・サークル名</label>
-      <input type="text" id="reg-affiliation" placeholder="例: ○○大学 △△サークル">
       <div class="error" id="reg-error" style="display:none;"></div>
       <button class="btn btn-primary" id="reg-submit" onclick="submitRegister()">登録して予約に進む</button>
     </div>`;
@@ -117,7 +121,6 @@ async function submitRegister() {
     display_name: name,
     grade_id: document.getElementById('reg-grade').value || null,
     faculty_id: document.getElementById('reg-faculty').value || null,
-    affiliation_name: document.getElementById('reg-affiliation').value.trim() || null,
   };
   try {
     const res = await fetch(API_ROOT + 'registrants/register.php', {
