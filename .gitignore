@@ -1,0 +1,15 @@
+# 環境依存の秘密情報・ローカル設定
+.env
+config.secret.php
+
+# INSTALL_SECRET等の実際の値を書き込んで使う運用スクリプト
+# （テンプレート化していないファイルは追跡しない）
+
+# OS・エディタ
+.DS_Store
+Thumbs.db
+
+# 依存関係・ログ
+node_modules/
+vendor/
+*.log
